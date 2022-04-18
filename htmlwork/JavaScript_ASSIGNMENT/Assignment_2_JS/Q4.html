@@ -1,0 +1,60 @@
+<!-- Q5.Write a code to iterate through the given string and store the alphabet and count(occurance) in object
+-{A:2,a:1, s:10, d:20 ,f:30}
+"A computer is a machine that can be programmed to carry out sequences of
+ arithmetic or logical operations automatically. Modern computers can perform
+ generic sets of operations known as programs. These programs enable computers
+ to perform a wide range of tasks. A computer system is a complete computer
+ that includes the hardware operating system main software  and peripheral
+ equipment needed and used for full operation. This term may also refer 
+to a group of computers that are linked and function together" -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>iterate through the given string and store the alphabet and count(occurance) in object</title>
+	<script type="text/javascript">
+		
+		// function that count character occurrences in string
+function count_occur( str )
+{
+  // checking string is valid or not
+  if( str.length == 0 )
+  {
+    document.write("Invalid string")
+    return;
+  }
+  //cor loop to iterate over string
+  for( var i = 0 ;i < str.length ;i++)
+  {
+    //variable counting occurrence
+    let count = 0;
+    for( var j = 0 ;j < str.length ;j++)
+    {
+      if( str[i] == str[j] && i > j  )
+      {
+       break;
+      }
+      if( str[i] == str[j]  )
+      {
+        count++;
+      }
+    }
+    if( count > 0)
+    document.write(`${str[i]} occurs ${count} times`+"<br><br>");
+     
+  }
+ 
+}
+ 
+// test string
+var test_str = "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. Modern computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. A computer system is a complete computer that includes the hardware operating system main software and peripheral equipment needed and used for full operation. This term may also refer to a group of computers that are linked and function together";
+count_occur( test_str);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

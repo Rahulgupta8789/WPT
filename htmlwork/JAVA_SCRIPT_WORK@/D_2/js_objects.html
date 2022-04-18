@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS Objects</title>
+	<script type="text/javascript">
+		//Here creating a object
+		var std = {
+			name:"Rahul",           // name is the key/member/property
+			branch :"EEE",
+			marks:100
+		}
+
+		//Can we print object on page directly
+		document.write(std);   // We cannot directly print the object on page
+		//but we can print object in console to check
+		console.log(std);
+		document.write("<hr>");
+
+		//Access property of object
+		document.write( "Name: " + std.name+"<br>")
+		document.write( "Branch: " + std.branch+"<br>")
+		//Accessing property using subscript operator
+		document.write("<hr>");
+		document.write( "Name: " + std["name"]+"<br>")
+		document.write( "Branch: " + std["branch"]+"<br>")
+
+
+		//Add new property to object
+		std.email = "sahrahulgupta@gmail.com"
+		console.log(std)
+
+		//Delete a property
+		delete std.email
+		console.log(std)
+
+
+		//Nested Object
+		var std = {
+			name:"Rahul", // name is the key/member/property
+			branch :"EEE",
+			marks:100,
+			contact :{
+				email:"sahrahulgupta@gmail.com",
+				phone:"8789392218"
+			},
+			hobbies : ["reading","playing"]
+		}		
+
+		console.log(std);
+		document.write("<hr>")
+		//Access nested object element
+		document.write("Contact email:  "+ std.contact.email + "<br>") // {email : ,phone: }
+		document.write("Hobbes : "+ std.hobbies[0] + "<br>")
+
+		//__________________________________________________
+		//Array of object
+		document.write("<hr>")
+		var std_lst = [
+		{name:"rahul",branch : "EEE"}, // 0
+		{name:"anubhav",branch : "EC"}, // 1
+		{name:"Pallavi",branch : "CS"}, //2
+		]
+
+		console.log(std_lst)
+		for (var i = 0 ; i < std_lst.length ; i++){
+			document.write("Name: "+ std_lst[i].name + "  Branch : "+std_lst[i].branch + "<br>")
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

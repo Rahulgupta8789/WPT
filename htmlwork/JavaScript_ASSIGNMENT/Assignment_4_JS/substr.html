@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <Script type="text/javascript">
+        function strOpration(){
+            var choice = document.getElementsByClassName("opt");
+            var str = document.getElementById("str").value;
+            var substr = document.getElementById("substr").value;
+            
+            if(choice[0].checked){
+                if(str.includes(substr)){
+                    alert(" SubString Found in main String")
+                }else{
+                    alert(" SubString not Found in main String")
+                }
+                
+            }
+
+            if(choice[1].checked){
+                alert(str.toUpperCase(substr))
+            }
+
+            if(choice[2].checked){
+                alert(str.toLowerCase(substr))
+            }
+
+            if(choice[3].checked){
+                alert(str.trim())
+            }
+
+            if(choice[4].checked){
+                alert(str.concat(substr))
+            }
+
+            if(choice[5].checked){
+                alert(str.replace(str,substr))
+            }
+        }
+
+    </Script>
+</head>
+<body>
+    <div>
+        <form>
+            Enter String: <input type="text" name="string" id="str"><br><br>
+            Enter Sub String: <input type="text" name="sbuString" id="substr" ><br><br>
+            Replace with String: <input type="text" name="newString" id="rpStr" ><br><br>
+            <input type="radio" name="s" class="opt" value="search"> search sub string in main string
+            <input type="radio" name="s" class="opt" value="upper"> To Upper Case
+            <input type="radio" name="s" class="opt" value="lower"> To lower Case
+            <input type="radio" name="s" class="opt" value="trim"> Trim spaces
+            <input type="radio" name="s" class="opt" value="concat"> Concatinate
+            <input type="radio" name="s" class="opt" value="replace"> Replace <br>
+
+            <button onclick="strOpration()">Submit Query</button>
+        </form>
+    </div>
+</body>
+</html>

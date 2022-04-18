@@ -1,0 +1,56 @@
+<!-- Q1.Write code to create fruit shop page.
+->Add fruits(Fields: id,name,rate)
+->Display fruits in table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Shop Page</title>
+    <script>
+        var fruit_shop =[]
+
+        function store(){
+            var fruit_id = document.getElementById("fruit_id").value;
+            var name = document.getElementById("name").value;
+            var rate = document.getElementById("rate").value;
+            if(fruit_id && name && rate){ 
+                fruit_shop.push({
+                    fruit_id:fruit_id,
+                    name:name,
+                    rate:rate
+                })
+            }
+            display();        
+            return false 
+        }
+
+        function display(){
+            var str = "<table border=1>";
+            str+="<tr><th>Fruit Id</th><th>Name</th><th>Rate (Per Kg)</th></tr>"
+
+            for(var i = 0 ;i < fruit_shop.length; i++){
+                str+="<tr><td>"+fruit_shop[i].fruit_id+"</td><td>"+fruit_shop[i].name+"</td><td>"+fruit_shop[i].rate+"</td></tr>"
+            }
+
+            str+="</table>"
+            document.getElementById("data").innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+    <form onsubmit="return store()">
+        
+        <input type="fruit_id" name="fruit_id" id="fruit_id" placeholder="Enter fruit_id" required><br>
+        <input type="name" name="name" id="name" placeholder="Enter name" required><br>
+        <input type="rate" name="rate" id="rate" placeholder="Enter rate" required><br>
+        <button>Submit </button>
+        
+    </form>
+    <br><br>
+    <div id="data"></div>
+</body>
+</html>

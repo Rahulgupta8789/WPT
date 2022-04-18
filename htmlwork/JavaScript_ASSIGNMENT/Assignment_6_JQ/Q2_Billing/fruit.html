@@ -1,0 +1,44 @@
+<!-- 2.Create a Fruit shop billing application ->Add fruit (id,name ,rate) ->Display fruit Add fruit option will take
+ data from prompt User can enter fruit name and quantity in input boxes.
+ If fruit is in list find the rate and print the total price on screen -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fruit Script</title>
+<script type="text/javascript">
+var fruits = [];
+function add_fruit(){
+for (var i=0; i < 2;i++){
+var id = parseInt(prompt("Enter id: "));
+var name = prompt("Enter name: ");
+var rate = parseInt(prompt("Enter rate: "));
+fruits.push({
+id : id,
+name : name,
+rate : rate
+});
+} }
+add_fruit();
+function cal_price(){
+var f_name = document.getElementById("f_name").value;
+var f_quant1 = document.getElementById("f_quant").value;
+console.log(f_quant1)
+for (var i=0; i < fruits.length; i++){
+if (fruits[i].name == f_name){
+//console.log("found")
+res = f_quant1 * fruits[i].rate;
+document.getElementById("result").innerHTML = "Total price: " + res;
+} }
+console.log(fruits[1].name)
+}
+</script>
+</head>
+<body>
+<input type="text" id="f_name"/><br/>
+<input type="text" id="f_quant"/><br/>
+<input type="button" onclick="cal_price()" id="f_cal_price" value="Total price"/><br/>
+<div id="result"></div>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!-- Q10.Write a code to check the given string is palindrome or not. (abba) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Palindrome</title>
+	<script type="text/javascript">
+		
+		var str = "abba";
+        var i = 0, j = str.length - 1;
+
+		while (i < j) {
+            if (str.charAt(i) != str.charAt(j)){
+            document.write("The given String abba is not palindrome");
+        }
+            i++;
+            j--;
+        }
+        document.write("The given String abba is palindrome");
+	</script>
+</head>
+<body>
+</body>
+</html>
+

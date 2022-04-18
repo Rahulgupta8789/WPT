@@ -1,0 +1,57 @@
+Q
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function add(){       
+            var n1 = document.getElementById("num1").value
+            var n2 = document.getElementById("num2").value
+            var result = parseInt(n1) + parseInt(n2);
+            document.getElementById("result").innerHTML = "Result of Addition is "+ result+"<hr>";
+        }
+
+        function sub(){       
+            var n1 = document.getElementById("num1").value
+            var n2 = document.getElementById("num2").value
+            var result = parseInt(n1) - parseInt(n2);
+            document.getElementById("result").innerHTML = "Result of Substraction is "+ result+"<hr>";
+        }
+
+        function div(){       
+            var n1 = document.getElementById("num1").value
+            var n2 = document.getElementById("num2").value
+            var result = parseInt(n1) / parseInt(n2);
+            document.getElementById("result").innerHTML = "Result of Division is "+ result+"<hr>";
+        }
+
+        function mul(){       
+            var n1 = document.getElementById("num1").value
+            var n2 = document.getElementById("num2").value
+            var result = parseInt(n1) * parseInt(n2);
+            document.getElementById("result").innerHTML = "Result of Multiplication is "+ result+"<hr>";
+        }
+
+        function mod(){       
+            var n1 = document.getElementById("num1").value
+            var n2 = document.getElementById("num2").value
+            var result = parseInt(n1) % parseInt(n2);
+            document.getElementById("result").innerHTML = "Result of Modulus is "+ result+"<hr>";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="Enter number 1"><br>
+    <input type="text" id="num2" placeholder="Enter number 2"><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Substract</button>
+    <button onclick="div()">Divide</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="mod()">Modulus</button>
+    <p id="result"></p>
+</body>
+</html>

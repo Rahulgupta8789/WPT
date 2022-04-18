@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Subject</title>
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center">
+     <h1> Add Subject</h1>
+ 
+ </div>
+ <!-- The asterisk syntax evaluates expressions on selected objects  -->
+   <form method="post" th:action="@{/admin/subject}" th:object="${subject}">
+	  
+	   <div class="form-group">
+	    <label for="exampleInputSubjectName">Subject Name</label>
+	    <input type="text" class="form-control" id="exampleInputSubjectName" placeholder="Enter subject Name"
+	     th:field="*{subject_name}" required maxlength="20" >
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputSubjectCode">Subject Code</label>
+	    <input type="number" class="form-control" id="exampleInputSubjectCode" placeholder="Enter Subject Code"
+	     th:field="*{subject_code}" required  maxlength="38">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputClassId">Class ID</label>
+	    <input type="number" class="form-control" id="exampleInputClassId" placeholder="Enter Class ID"
+	     th:field="*{class_id}" required  maxlength="38">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+
+   
+   </form>
+
+</body>
+</html>

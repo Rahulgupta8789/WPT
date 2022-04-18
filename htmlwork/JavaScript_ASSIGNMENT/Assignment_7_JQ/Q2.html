@@ -1,0 +1,47 @@
+<!--Q 2.Write AJAX code to fetch data from given URL
+GET https://cat-fact.herokuapp.com/facts/random
+GET https://zoo-animal-api.herokuapp.com/animals/rand
+GET https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood
+and show in table(Show only important data)
+(Note:If any URL is not working skip that url) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX demo</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		
+		function display_table(data){
+			$("table").append("<tr><td>"+data.type+"</td><td>"+data.text+"</td></tr>")
+			
+		}
+
+		function fetch_data(){
+			var req = new XMLHttpRequest();
+			req.open("GET","https://cat-fact.herokuapp.com/facts/random",true) 
+         //  req.open("GET","https://zoo-animal-api.herokuapp.com/animals/rand",true) 
+         //   req.open("GET","https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood",true) 
+		
+			req.onreadystatechange = function(){
+				
+				if(req.readyState == 4){
+					var data = JSON.parse(this.responseText)
+					console.log(data)
+					display_table(data)
+				}
+			}
+			req.send()
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="fetch_data()">Fetch data</button>
+	<table border="1">
+		
+	</table>
+</body>
+</html>

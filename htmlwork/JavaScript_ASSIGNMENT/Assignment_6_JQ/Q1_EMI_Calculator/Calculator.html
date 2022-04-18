@@ -1,0 +1,50 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title> 
+    <script>
+    function operation(){
+var s = document.getElementById("txtString").value;
+var sub_s = document.getElementById("txtSubString").value;
+var rep_s = document.getElementById("txtReplaceString").value;
+var s_opr_arr = document.getElementsByClassName("stringOperation");
+if (s_opr_arr[0].checked){
+if(s.includes(sub_s)){
+var res = sub_s + " is present at index ";
+res += s.indexOf(sub_s);
+document.getElementById("result").innerHTML=res;
+} }
+if (s_opr_arr[1].checked){
+var res = s.toUpperCase();
+document.getElementById("result").innerHTML = res;
+console.log(res)
+}
+if (s_opr_arr[2].checked){
+var res = s.toLowerCase();
+document.getElementById("result").innerHTML = res;
+}
+if (s_opr_arr[3].checked){
+var res = s.split(" ");
+document.getElementById("result").innerHTML = res.join("");
+}
+if (s_opr_arr[4].checked){
+var res = s.split(" ");
+res = res.concat(sub_s);
+document.getElementById("result").innerHTML = res.join(" ");
+}
+if (s_opr_arr[5].checked){
+var res = s.replace(s,rep_s);
+document.getElementById("result").innerHTML = res;
+}
+return false;}
+    </script>
+    </head> 
+    <body>
+        
+
+    </body>
+    </html>

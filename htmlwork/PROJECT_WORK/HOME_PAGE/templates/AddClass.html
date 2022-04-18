@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Class</title>
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center">
+     <h1> Add Class</h1>
+ 
+ </div>
+ <!-- The asterisk syntax evaluates expressions on selected objects  -->
+   <form method="post" th:action="@{/admin/class}" th:object="${class}">
+	  
+	   <div class="form-group">
+	    <label for="exampleInputClassName">Class Name</label>
+	    <input type="text" class="form-control" id="exampleInputclassName" placeholder="Enter class Name"
+	     th:field="*{class_name}" required maxlength="20" >
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputClassCode">Class ID</label>
+	    <input type="number" class="form-control" id="exampleInputClassCode" placeholder="Enter last name"
+	     th:field="*{class_id}" required  maxlength="38">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+
+   
+   </form>
+
+</body>
+</html>

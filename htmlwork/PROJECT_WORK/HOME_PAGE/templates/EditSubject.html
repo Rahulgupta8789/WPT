@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Subject</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Update Subject Detail</h1>
+        <br />
+        <form action="#" th:action="@{/admin/subject_save}" th:object="${subject}"
+            method="post">
+ 
+            <table>
+               <tr>             
+                    <td>Subject ID:</td>
+                    <td>
+                        <input type="text" th:field="*{subject_id}" readonly="readonly" />
+                    </td>
+                </tr>  
+                <tr>             
+                    <td>Subject Name:</td>
+                    <td>
+                        <input type="text" th:field="*{subject_name}" />
+                    </td>
+                </tr>
+                 <tr>             
+                    <td>Subject Code:</td>
+                    <td>
+                        <input type="text" th:field="*{subject_code}" />
+                    </td>
+                </tr>
+                 <tr>             
+                    <td>Class ID:</td>
+                    <td>
+                        <input type="text" th:field="*{class_id}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

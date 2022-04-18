@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+.container{
+	background-color:rgb(242, 147, 53);
+	width:45%;
+	/* height:490px; */
+	margin-top:5%;
+	margin-bottom:5%;
+}
+
+.form-group{
+	margin-left:8%;
+	margin-right:8%;
+}
+
+.text-center{
+	font-weight: 500;
+    color: #d8d8e8;
+	/* color: #0b0b0b; */
+}

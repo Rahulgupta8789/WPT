@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Rreeggiss</title>
+<script>
+function reset_err(){
+document.getElementById("er").innerText=""
+}
+function amount(){
+var n=parseInt(document.getElementById("amt").value);
+if(n<5000){
+document.getElementById("er").innerText="must be greater than 5000";
+return false
+}
+return n
+}
+</script>
+</head>
+<body>
+<h1 align="center">Working with HTML Form Elements</h1>
+<hr color="red" size="4"/>
+<form method="GET">
+		<div style="width:60%; margin:auto">
+		<fieldset>
+		<legend><b>Registration form</b></legend>
+		<table width="60%" align="center" border="1px" cellspacing="0px" cellpadding="5px">
+		<tr>
+		<td>ID:</td>
+		<td><input type="text" name="txtName"></td>
+		</tr>
+		<tr>
+		<td>Name:</td>
+		<td><input type="text"  name="textUserName"></td>
+		</tr>
+		
+		<tr>
+		<td>Amount:</td>
+		<td><input type="text" id="amt" onblur="amount()" oninput="reset_err()" name="textamt" required></td>
+		<span id="er" style="color:red"></span>
+		</tr>
+		
+		<tr>
+		<td>Date of birth:</td>
+		<td><input type="date" name="dob" </td>
+		</tr>
+		
+		<tr>
+		<td>Gender:</td>
+		<td>
+		<input type="radio" name="gender" checked="checks" value="m"/>Male
+		<input type="radio" name="gender" value="fm"/>Female
+		<input type="radio" name="gender" value="oth"/>Other
+		</td>
+		</tr>
+		
+		<tr>
+		<td>Email:</td>
+		<td>
+		<input type="email" name="em">
+		</td>
+		</tr>
+		
+		<tr>
+		<td colspan="2" align="center">
+		<button type="submit" name="btnReg" style="background-color:blue">Register</button>
+		</td>
+		</tr>
+		
+		</table>
+		</fieldset>
+		</div>
+		</form>
+		</body>
+		</html>
+</form>
+</body>
+</html>

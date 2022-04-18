@@ -1,0 +1,29 @@
+<!-- 
+Q1. Create a EMI calculator: Contains Two text box : Total Amount, Month 
+Print the Monthly EMI(Don't use interest) -->
+
+<!DOCTYPE html> <html lang="en"> 
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>EMI calculator</title> 
+
+<script type="text/javascript">
+  
+    function cal_emi()
+    {
+    let amount = document.getElementById("total_amount").value;
+    let month = document.getElementById("month").value;
+    let res = amount / month ;
+    document.getElementById("result").innerHTML="Your monthly EMI is :  "+res;
+    }
+    </script>
+    </head> <body><h3 style="color:rgb(27, 212, 182); text-decoration: underline;">EMI CALCULATOR</h3>
+    Enter Amount :<pre><input type="text" name="text" id="total_amount" placeholder="Enter amount here"></pre><br><br>
+    Enter Months :<pre><input type= "text" name="text1" id="month"  placeholder="Enter month here"></pre><br><br> 
+    <button onclick="cal_emi()">Calculate EMI</button> <br> 
+    <div id="result"></div>
+    </body>
+    </html>
+

@@ -1,0 +1,30 @@
+<!-- Q2_1.Write a program to print even number from 1 to 20 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Even Numbers within a Range of 1 to 20</title>
+    <script>
+      function printEvenNums(){
+        
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+        var evenNums = "<br>Even Numbers:<br>";
+ 
+        for(i=start; i<=end; i++){
+          if(i % 2 == 0){
+            evenNums += i + "<br>";
+          }
+        }
+        document.getElementById("result").innerHTML = evenNums;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Even Numbers within a Range of 1 to 20</h3>
+    Start: <input type="number" min="0" id="start" value="1" />
+    End: <input type="number" id="end" min="1" value="20" />
+    <input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
+    <div id="result"></div>
+  </body>
+</html>

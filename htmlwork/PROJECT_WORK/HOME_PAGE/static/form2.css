@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+body{
+	background-color:orange;
+}
+.container{
+	background-color:white;
+	width:35%;
+	height:400px;
+	margin-bottom:5%;
+	margin-top:5%;
+	margin-left:45%;
+}
+
+.text-center{
+	margin-top:8%;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Result View </title>
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <h1> Result List</h1>
+    <a th:href="@{/admin/add_result}">Add New Result</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Class ID</th>
+                <th>SubJect ID</th>
+              	<th>Obtain Marks</th>               
+                <th>Total Marks</th> 
+                <th>Status</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="result : ${listResult}">
+                <td th:text="${result.student.Id}">Student ID</td>
+                <td th:text="${result.classes.class_id}">Class ID</td>
+                <td th:text="${result.subject.subject_id}">Subject ID</td>
+               <td th:text="${result.marks}">Obtain Marks</td>
+                <td th:text="${result.total_mark}">Total Marks</td>
+                <td th:text="${result.status}">Status</td>
+                
+                <td>
+                   <a th:href="@{'/admin/edit/' + ${result.student}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/admin/delete/' + ${result.student}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

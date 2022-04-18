@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <script src="../bootstrap/js/jquery-3.1.1.min.js" type="text/javascript"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+     <script type="text/javascript">
+        function validate(){
+           var number=document.getE1eventById("txtId").value
+            
+            if(number.length<10){
+                dodocument.getE1eventById("error").innerText="Isbn No. must of 10 digit";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+
+    <h2 align="center">Working with Book html page</h2>
+    <hr color="red" size="5/">
+    <form method="GET" action="/book"accept-charset="utf-8">
+        <div style="width:80%;margin:auto">
+        <fieldset>
+            <legend><b>Book Data Fields</b></legend>
+            <h2 class="text-center">Bootstrap Book HTML Page</h2>
+            <hr>
+            <div class="container">
+                <div class="jumbotron" style="background-color:rgb(251, 205, 152)">
+                    <form class="needs-validation"novalidate>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="invalid-feedback">Book Name</div>
+                                <input type="text"id="txtId1" class="form-control" placeholder="Enter Book Name"required/>
+
+                                <div class="invalid-feedback">Author Name</div>
+                                <input type="text"id="txtId2" class="form-control" placeholder="Enter Author Name"required/>
+
+
+                                <div class="invalid-feedback">ISBN NO.</div>
+                                <input type="number"id="txtId3" class="form-control" placeholder="Enter ISBN 10 Digit No."required onblur="validate()"/>
+                                <span id="error"></span><br>
+                                <div class="invalid-feedback">Published Date</div>
+                                <input type="date" name="txtPUB"/>
+
+                                <button>Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+        </div>
+
+    </form> 
+    
+</body>
+</html>

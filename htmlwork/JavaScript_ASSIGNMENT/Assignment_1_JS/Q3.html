@@ -1,0 +1,44 @@
+<!-- Q3.Implement a calculator using switch case
+(Take two number from and prompt and also operator) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator Using Switch Case</title>
+	<script type="text/javascript">
+        
+var operator = prompt('Enter operator (  +  or  -  or  *  or  /  ): ');
+var a = parseFloat(prompt("Enter first number: "));
+var b = parseFloat(prompt("Enter second number: "));
+var result;
+switch(operator) {
+    case '+':
+         result = a + b;
+		 document.write("The result of " +a+ " + " +b+ " is " +result);
+        break;
+
+    case '-':
+		result = a - b;
+		 document.write("The result of " +a+ " - " +b+ " is " +result);
+        break;
+
+    case '*':
+		result = a * b;
+		 document.write("The result of " +a+ " * " +b+ " is " +result);
+        break;
+
+    case '/':
+	result = a / b;
+		 document.write("The result of " +a+ " / " +b+ " is " +result);
+        break;
+
+    default:
+		document.write("Invalid operator");
+        break;
+}
+	</script>
+</head>
+<body>
+</body>
+</html>

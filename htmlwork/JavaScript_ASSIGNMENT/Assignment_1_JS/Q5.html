@@ -1,0 +1,41 @@
+<!-- Q5.num="1,2,3,4,5,6,7,8,9"
+Note:Use num string in below questions:
+1.Print only numbers not comma
+2.Print all even numbers
+3.Fetch "1" and "5" from string and perform numerical addition
+4.Fetch "2" and "8" from string and perfrom numerical muliplication -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<script type="text/javascript">
+
+    var arr = [1,2,3,4,5,6,7,8,9]
+    //ques 5a
+    document.write("Numbers without Comma : "+ arr.join("")+"<br>")
+    
+    //ques 5b
+    document.write("Even numbers are " +"<br>");
+    for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                document.write(arr[i]+"<br>");
+            }
+        }
+
+       
+    //ques 5c
+    var result = arr[0] + arr[4];
+    document.write("Numerical Addition of " +arr[0]+ " and " +arr[4]+ " is " +result+"<br>");
+
+    //ques 5d
+    var result = arr[1] * arr[7];
+    document.write("Numerical Multiplication of " +arr[1]+ " and " +arr[7]+ " is " +result);
+
+
+</script> 
+</head>
+<body>  
+</body>
+</html>

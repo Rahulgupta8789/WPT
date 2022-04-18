@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <script src="../bootstrap/js/jquery-3.1.1.min.js" type="text/javascript"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <h2 align="center">Working with HTML Registration Form Elements</h2>	
+		<hr  color="red" size="5"/>
+	    <form method="GET" action="/registration" accept-charset="utf-8">			  
+			  <div style="width:80%;margin:auto">
+				<fieldset>
+				  <legend><b>Registration Form</b></legend>
+    <h2 class="text-center ">Bootstrap Registration form validation</h2>
+    <hr>
+    <div class="container">
+        <div class="jumbotron" style="background-color:palegreen;">
+            <!-- <form class="was-validated"> -->
+                <form class="needs-validation" novalidate>
+                 <div class="form-row">
+                     <div class="col-md">
+                        <div class="invalid-feedback">Please fill out your full name</div>
+                         <input  type="text" id="txtId" class="form-control" 
+                         placeholder="Enter Full Name" required/>
+                         <!-- for custom validation mesaages -->
+                         <!-- <div class="valid-feedback">Valid</div> -->
+                         
+
+                         <div class="col-md">
+                            <div class="invalid-feedback">password</div>
+                            <input  type="text" id="txtId" class="form-control" 
+                            placeholder="Password" required/>
+                            
+                     </div>
+
+                     <div class="col-md">
+                        <div class="invalid-feedback">Retype password</div>
+                        <input  type="text" id="txtId" class="form-control" 
+                        placeholder="Retype Password" required/>
+                       
+                 </div>
+
+                 
+                     <div class="col-md">
+                        <div class="invalid-feedback">Please fill valid email</div>
+                        <input  type="email" id="txtEmail" class="form-control" 
+                        placeholder="Enter Email" required/>
+                        <!-- for custom validation mesaages -->
+                        <!-- <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill valid email</div> -->
+                        
+                    </div>
+                 </div>
+                 <!-- <div class="form-row">
+                    <div class="col-md">
+                        <input  type="text" id="txtMoble" class="form-control" 
+                        placeholder="Enter your mobile" required/>
+                        <!-- for custom validation mesaages -->
+                        <!-- <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out your full name</div> -->
+                    </div> -->
+
+                    <div class="col-md">
+                        <div class="invalid-feedback">Please fill valid Gender</div>
+                        <input type="radio" name="gender" checked="checked" value="m"/>Male
+								<input type="radio" name="gender" value="fm"/>Female
+								<input type="radio" name="gender" value="o"/>Other
+                        
+
+
+                    <div class="col-md">
+                       <select id="txtCountry" class="form-control" required>
+                           <option value="">---Select Country---</option>
+                           <option value="1">India</option>
+                       </select>
+                       <!-- for custom validation mesaages -->
+                       <!-- <div class="valid-feedback">Valid</div>
+                       <div class="invalid-feedback">Please fill valid email</div> -->
+                   </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md">
+                         <label class="form-check-inline">
+                            <input  type="checkbox" id="txtTerms" class="form-check"  
+                            required/>
+                            I accept terms & conditions
+                            <!-- for custom validation mesaages -->
+                            <!-- <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please fill out your full name</div> -->
+                            <input type="submit" value="Register Me" class="btn btn-primary">
+                        </label>
+                    </div>
+                   
+                </div>
+           </form> 
+           <script>
+            (function() {  
+              window.addEventListener('load', function() {
+                  var forms = document.getElementsByClassName('needs-validation');   
+                //filter() calls a provided callback function once for each element in an array, and constructs a new array of all the values for which callback returns a value that coerces to true. 
+                 var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(e) {
+                    if (form.checkValidity() === false) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);  
+            })();
+            </script>
+            
+           
+        </div>
+    </div>
+</fieldset>
+</body>
+</html>

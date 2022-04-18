@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Print table</title>
+	<script type="text/javascript">
+		function print_table(num,range){ 
+			for(var i = 1;i <= range; i++){
+				document.write(num+ " * " +i+ " = " +num*i+ "<br>");
+			}
+		}
+		var num = prompt("Enter number to print table")
+		var range = prompt("Enter range")
+		print_table(num,range) 
+	</script>
+</head>
+<body>
+</body>
+</html>

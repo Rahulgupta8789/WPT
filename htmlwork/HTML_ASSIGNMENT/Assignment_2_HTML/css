@@ -1,0 +1,85 @@
+.container{
+    width: 96%;
+    height: 800px;
+    margin: auto;
+  }
+.header{
+    background-color: #bb397e;
+    height:5%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+   color: white;
+    font-weight: bold;
+}
+.body{
+     width: 100%;
+    /* height: 80%;*/
+     background-color: rgb(225, 191, 220);
+}
+.row{
+    width: 100%;
+    height: 5%;
+   /* background-color: green;
+    margin-top: 2px;*/
+}
+ /*selectors for menu*/
+ul{
+    background-color: black;
+    list-style: none;
+    border-radius: 10px;
+    height: 30px;
+    }
+/*child selector*/
+ul>li{
+    /* display:none;*/
+   /* display: inline;*/
+    display: inline-block;
+    width: 16%;
+    /*background-color: blueviolet;*/
+    padding-top:.7%;
+}
+/*descendant selector*/
+ul a{
+   text-decoration: none;
+   color:white;
+   font-weight: bold;
+}
+ul a:hover{
+   text-transform: uppercase;
+   color:red;
+   }
+.col-left{
+  font-size: 16px;
+  width: 45%;
+  height: 100%;
+  text-align: right;
+  padding-right: 3px;
+  float: left;
+}
+.col-right{
+  font-size: 18px;
+  width: 45%;
+  height: 100%;         
+  padding-left: 3px;
+  float: left;
+}
+  input[type=submit] {
+  text-transform: uppercase;
+  border: 5px solid lightseagreen;
+  border-radius:5px;
+  background-color:lightskyblue;
+}
+.footer{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background-color: #55aabb;
+  color: white;
+  font-weight: bold;
+}
+.footer div{
+  vertical-align: middle;
+  height: 80%;
+  padding: 1%;
+}

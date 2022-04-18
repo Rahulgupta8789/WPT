@@ -1,0 +1,188 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+  <title>Title</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+    <a class="navbar-brand fs-8 h2 " href="#">STUDENT MANAGEMENT SYSTEM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#TopNavbarItems"
+      aria-controls="TopNavbarItem" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="TopNavbarItems">
+
+      <ul class="navbar-nav ms-auto justify-content-evenly">
+        <li class="nav-item me-5">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarlogout" role="button">
+              Logout
+          </a>
+      </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row align-items-stretch">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 90vh;">
+        
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a th:href="@{/admin/home}" class="nav-link active" aria-current="page">
+              Admin Dashboard
+            </a>
+          </li>
+          
+          <li>
+            <a th:href="@{/admin/register_S}" class="nav-link text-white">
+              Register Student
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/viewstudent}" class="nav-link text-white">
+              View Student
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/add_class}" class="nav-link text-white">
+              Add Class
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/viewclass}" class="nav-link text-white">
+              View class
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/add_subject}" class="nav-link text-white">
+             
+              Add Class
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/viewsubject}" class="nav-link text-white">  
+              View Subject
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/add_result}" class="nav-link text-white">
+              Add Result
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/admin/viewresult}" class="nav-link text-white">
+              View Result
+            </a>
+          </li>
+        </ul>
+       <hr>
+      </div>
+	  
+      <div class="col">
+        <p class="fs-1">Admin Dashboard</p>
+        <hr />
+        <div class="container">
+          <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+            <div class="container-fluid mt-5">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card border border-success">
+                    <img src="/images/1.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-secondary stretched-link" style="width: 100%;">View Details</a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12 ">
+                  <div class="card border border-info">
+                    <img src="/images/2.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-info stretched-link" style="width: 100%;">View Attendance</a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card border border-danger">
+                    <img src="/images/3.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-danger stretched-link" style="width: 100%;">View Result</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid mt-5">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card border border-warning">
+                    <img src="/images/4.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-warning stretched-link" style="width: 100%;">Fee Details</a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12 ">
+                  <div class="card border border-primary">
+                    <img src="/images/5.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-primary stretched-link" style="width: 100%;">Class and subject</a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card border border-success">
+                    <img src="/images/6.png" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-success stretched-link" style="width: 100%;">Download
+                      Result</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading fs-2 text-center text-decoration-underline">
+                        Bar Chart Example
+                    </div>
+                    <div class="panel-body">
+                        <div id="morris-bar-chart" style="position: relative;"><svg height="486" version="1.1" width="540" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.5234375" y="351.5" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.0234375,351.5H761" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.5234375" y="269.875" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">25</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.0234375,269.875H761" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.5234375" y="188.25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.0234375,188.25H761" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.5234375" y="106.625" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.0234375,106.625H761" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.5234375" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.0234375,25H761" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="709.8588169642857" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="607.5764508928571" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><text x="505.29408482142856" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="403.01171875" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><text x="300.72935267857144" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><text x="198.44698660714286" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2007</tspan></text><text x="96.16462053571428" y="364" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><rect x="57.80873325892857" y="25" width="36.855887276785715" height="326.5" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="97.66462053571428" y="57.64999999999998" width="36.855887276785715" height="293.85" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="160.09109933035714" y="106.625" width="36.855887276785715" height="244.875" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="199.94698660714286" y="139.275" width="36.855887276785715" height="212.225" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="262.3734654017857" y="188.25" width="36.855887276785715" height="163.25" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="302.22935267857144" y="220.9" width="36.855887276785715" height="130.6" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="364.6558314732143" y="106.625" width="36.855887276785715" height="244.875" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="404.51171875" y="139.275" width="36.855887276785715" height="212.225" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="466.93819754464283" y="188.25" width="36.855887276785715" height="163.25" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="506.79408482142856" y="220.9" width="36.855887276785715" height="130.6" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="569.2205636160714" y="106.625" width="36.855887276785715" height="244.875" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="609.0764508928571" y="139.275" width="36.855887276785715" height="212.225" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="671.5029296875" y="25" width="36.855887276785715" height="326.5" r="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="711.3588169642857" y="57.64999999999998" width="36.855887276785715" height="293.85" r="0" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none; left: 281.302px; top: 153px;"><div class="morris-hover-row-label">2008</div><div class="morris-hover-point" style="color: #0b62a4">
+Series A:
+50
+</div><div class="morris-hover-point" style="color: #7a92a3">
+Series B:
+40
+</div></div></div>
+                    </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

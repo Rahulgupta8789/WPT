@@ -1,0 +1,43 @@
+<!-- Q3.Write a code to create a Object from given number range
+-If the input is 4 then the keys in object are 1,2,3,4
+-And value is square of the key
+{1:1, 2:4, 3:9 ,4:16, 5:25} -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Create a Object from given number range</title>
+	<script type="text/javascript">
+		var number_lst = [] //empty array
+		function add_numbers() {
+			for(var i=0 ;  i <= 5 ; i++){
+				var n = prompt("Enter numbers");
+				var obj = {
+					number:n,
+					number_sq:n*n
+				}
+				number_lst.push(obj)
+			}
+		}
+
+		add_numbers();
+		console.log(number_lst);
+		function display(){
+			for( var i = 0 ; i < number_lst.length; i++ ){
+                document.write("{"+number_lst[i].number+":"+number_lst[i].number_sq+"}"+"<br>")
+				}
+		}
+		display()
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+

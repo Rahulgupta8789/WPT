@@ -1,0 +1,81 @@
+<!-- Q6. Create an HTML page to accept customer’s information for the following with appropriate form 
+elements: Customer Name, Address, Gender, Languages known, City, and to submit and clear 
+the contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer details</title>
+</head>
+<body>
+    <form>
+    <div style="width: 80%; margin: auto; ">
+        
+            <fieldset>
+                <legend><b> Clients Details</b> </legend>
+           <table>
+               <tr>
+               <td> Customer Name:</td>
+               <td> <input type="text" name="txtCliName" id ="txtCliName"/>
+               </td></tr>
+
+               <tr>
+                <td> Address :</td>
+                <td> <input  type="text" name="txtAdd" id ="txtAdd"/>
+                </td></tr>
+           
+                <tr>
+                    <td>Gender:</td>								
+                    <td>
+                    <input type="radio" name="gender" checked="checked" value="m"/>Male
+                    <input type="radio" name="gender" value="f"/>Female
+                    <input type="radio" name="gender" value="O"/>Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language Known:</td>								
+                    <td>
+                    <input type="checkbox" name="lang Known[]" checked value="1"/>Hindi
+                    <input type="checkbox" name="lang Known[]" value="2"/>English
+                    <br><input type="checkbox" name="lang Known[]" value="3"/>Bengali
+                    <input type="checkbox" name="lang Known[]" value="4"/>Others
+                    </td>
+               
+                            <tr>
+								<td>City:</td>								
+								<td>
+								    <select name="CliCity">
+									    <option value="-1">---Select City---</option>
+									    <optgroup label="Bihar">
+											<option value="1">Patna</option>
+											<option value="2">Chapra</option>
+											<option value="3">Siwan</option>
+										</optgroup>
+                                        <optgroup label="West Bengal">
+											<option value="1">Kolkata</option>
+											<option value="2">Medinapur</option>
+											<option value="3">Darjeeling</option>
+										</optgroup>
+                                        </select>
+                                    </td>
+                            </tr>
+                        <tr>
+                            <td>
+                                
+								<input type="submit" name="btnRegister"  value="Register">
+                            </td>
+                        </tr>
+
+                        
+        </table>
+        </fieldset>
+          
+        </form>
+    </div>
+    
+</body>
+</html>
+

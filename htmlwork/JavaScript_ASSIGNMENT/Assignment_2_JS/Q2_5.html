@@ -1,0 +1,29 @@
+<!-- Q2_5.Write a code which accepts a sequence of comma seperated five numbers and find the addition of all of them -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>accepts a sequence of comma seperated five numbers and find the addition of all of them</title>
+	 <script>
+
+    function add_comma_seperated_nums(string){
+			var num_array = string.split(",");
+			var sum = 0
+			for(var i = 0 ; i < num_array.length; i++){
+				sum += parseInt(num_array[i])
+			}
+			console.log(sum)
+			return sum; // this function returning sum variable value
+		}
+		
+		var nums = prompt("Enter comma seperated numbers :")//3,4,5
+		var s = add_comma_seperated_nums(nums) // calling function and storing value in s //variable
+		document.write("<hr>")
+		document.write("Addition of comma seperated number is :" + s + "<br>")
+        </script>
+</head>
+<body>
+
+</body>
+</html>

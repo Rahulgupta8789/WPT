@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;color: green;">HTML5 new input type elements</h2> 
+    <hr style="background-color: red;height: 3px;"/>
+    <pre>
+    <form autocomplete="off" action="HTM5Form.html" method="get">
+        <input type="search" id="txtSearch" autofocus tabindex=1>
+        <input type="email" id="ttxtEmail" placeholder="Enter Email" tabindex=2 >
+        <input type="url" id="txtUrl" tabindex=3 >
+        <input type="tel" id="txtTel" pattern="\d{3}-\d{3}"
+               oninvalid="setCustomValidity('Enter valid pincode as 000-000 format')"
+               oninput="setCustomValidity('')"
+               placeholder="Enter Pincode 000-000" >  <!--800-014 -->
+        <input type="datetime" id="txtDateTime" >
+        <input type="date" id="txtDate" value="2021-12-24" >
+        <input type="month" id="txtMonth">
+        <input type="week" id="txtWeek">
+        <input type="time" id="txtTime">
+        <input type="datetime-local" id="txtDateTimeLocal" min="1981-01-01T00:00" max="2001-01-01T00:00">
+        <input type="number" id="txtNumber">
+        <input type="range" id="txtRange">
+        <input type="color" id="txtColor" >  
+        
+        <input list="cities" name="cities">
+        <datalist id="cities">
+        <option value="Noida">
+        <option value="Delhi">
+        <option value="Dehradun">
+        <option value="Nagpur">
+        <option value="Patna">
+        </datalist>
+
+        <button type="submit">Submit</button>
+
+        <button type="submit" formmethod="post"  formaction="./HTML5Demo1.html" 
+        formnovalidate formtarget="_blank" > Next</button>
+
+        <button type="submit"  formaction="./D_10/HTML5Demo2.html">HTML-2</button>
+    
+    </form>
+     <h2>Output Tag in HTML5</h2>
+     <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+         <input type="number" name="a" value="50">+<input type="number" name="b" value="50">=<output  name="x" for="a b">100</output>
+     </form>
+   
+    </pre>
+</body>
+</html>

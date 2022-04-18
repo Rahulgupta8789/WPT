@@ -1,0 +1,27 @@
+<!-- Q9.Write a code to print fibonnaci series( 1,1,2,3,5,8,13,21...) till 100. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fibonnaci series</title>
+	<script type="text/javascript">
+	document.write("The fibonacci series is: <br>")	
+        var n = 12;
+		var num1 = 0, num2 = 1;
+        var counter = 0;
+
+		while (counter < n) {
+            document.write(num1 + " ");
+                var num3 = num2 + num1;
+                num1 = num2;
+                num2 = num3;
+                counter = counter + 1;
+        }
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+

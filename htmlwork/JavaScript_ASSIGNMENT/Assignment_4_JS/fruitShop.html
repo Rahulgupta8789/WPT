@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fruit Shop</title>
+        <script type="text/javascript">
+            
+            var fruit_list=[];
+            var no_of_fruits= parseInt(prompt("How many fruits do you want to add"))
+            function add_fruits(){
+                for(var i=0; i<no_of_fruits; i++){
+                    var id = prompt("Enter fruit Id");
+                    var name= prompt("Enter fruit name");
+                    var rate= prompt("Enter fruit rate");
+                    var obj ={
+                        id:id,
+                        name:name,
+                        rate:rate
+                    }
+                    fruit_list.push(obj);
+                }
+            }
+           
+            function display(){
+                var str ="<table border=1 cellspacing=0px";
+                str += "<tr><td>select</td><td>&nbsp; Id &nbsp;</td><td>Name</td><td>Rate</td><td>Quantity</td></tr>"
+                for(var i=0; i<fruit_list.length; i++){
+                    str = str + "<tr><td>"+"<input type=checkbox class=check name=name id=i>"+
+                        "</td><td>"+"<b><em>"+fruit_list[i].id+
+                        "</td><td>"+"<b><em>"+fruit_list[i].name+
+                        "</td><td>"+"<b><em>"+fruit_list[i].rate+
+                        "</td><td>"+"<input type=number class=quan name=namr>"+"</td></tr>"   
+                }
+                str += "</table>";
+                document.write(str);
+            }
+
+            function buyFruits(){
+                var amount = 0;
+                var choice = document.getElementsByClassName("check");
+                var quantity = document.getElementsByClassName("quan");
+                for(var i=0; i<fruit_list.length; i++){
+                    if(choice[i].checked){
+                        amount += parseInt(fruit_list[i].rate) * parseInt(quantity[i].value);
+                    }
+                }
+                document.getElementById("total").value = amount;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div style="height: 300px;width: 90%; 
+                    background-image: url('./fruit2.jpg');
+                    margin: auto;font-size: 25px;">
+
+            <h2 style="text-align: center;">Fruit Shop</h2>
+            <h3>Fruit details</h3>
+            <script type="text/javascript">
+                add_fruits();
+                display();
+                
+            </script>
+            <button onclick="buyFruits()">Buy</button>
+        </div>
+        
+            <h3 style="text-align:right;">Billing</h3>
+            Total amount:<input type="text" name="fruit" id="total" value=""><br>
+        </div>
+    </body>
+</html>

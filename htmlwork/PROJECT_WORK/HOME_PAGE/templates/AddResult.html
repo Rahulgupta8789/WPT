@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Result</title>
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center">
+     <h1> Add Result</h1>
+ 
+ </div>
+ <!-- The asterisk syntax evaluates expressions on selected objects  -->
+   <form method="post" th:action="@{/admin/result}" th:object="${result}">
+	  
+	  <div class="form-group">
+	    <label for="exampleInputclassid">Class ID</label>
+	    <input type="number" class="form-control" id="exampleInputClassId" placeholder="Enter Class Id"
+	     th:field="*{classes}" required  maxlength="38">
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputStidentId">Student ID</label>
+	    <input type="number" class="form-control" id="exampleInputStudent" placeholder="Enter Student Id"
+	     th:field="*{student}" required  maxlength="38">
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputSubjectId">Subject ID</label>
+	    <input type="number" class="form-control" id="exampleInputSubjectId" placeholder="Enter Subject Id"
+	     th:field="*{subject}" required  maxlength="38">
+	  </div>
+	  
+	   <div class="form-group">
+	    <label for="exampleInputSubjectName">Subject Name</label>
+	    <input type="text" class="form-control" id="exampleInputSubjectName" placeholder="Enter subject Name"
+	     th:field="*{subject_Name}" required maxlength="20" >
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputMark">Obtain Marks</label>
+	    <input type="number" class="form-control" id="exampleInputMarks" placeholder="Enter Obtain Mark"
+	     th:field="*{marks}" required  maxlength="38">
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="exampleInputTotalMark">Total Marks</label>
+	    <input type="number" class="form-control" id="exampleInputTotalMarks" placeholder="Enter Total Mark"
+	     th:field="*{total_mark}" required  maxlength="38">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputresultStatus">Result Status</label>
+	    <input type="text" class="form-control" id="exampleInputStatus" placeholder="Enter Pass/Fail"
+	     th:field="*{status}" required  maxlength="38">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+
+   
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org")>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Portal</title>
+</head>
+<body>
+<div class="container">
+	<h1>Welcome To Student Management System</h1>
+	
+	</div>
+	<div>
+		<h3><a th:href="@{/admin/register_S}">Register Student</a></h3>
+		<h3><a th:href="@{/admin/viewstudent}">View Student</a></h3>
+		<h3><a th:href="@{/admin/add_class}">Add Class</a></h3>
+		<h3><a th:href="@{/admin/viewclass}">View Class</a></h3>
+		<h3><a th:href="@{/admin/add_subject}">Add Subject</a></h3>
+		<h3><a th:href="@{/admin/viewsubject}">View Subject</a></h3>
+		<h3><a th:href="@{/admin/add_result}">Add Result</a></h3>
+		<h3><a th:href="@{/admin/viewresult}">View Result</a></h3>
+	</div>
+
+</body>
+</html>

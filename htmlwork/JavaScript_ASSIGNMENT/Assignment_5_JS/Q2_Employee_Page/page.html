@@ -1,0 +1,106 @@
+<!-- Q2. Create a Employee Page: Create Given fields
+:ID,Name,Email,Phone,Gender,City(DropDown), Date of birth. On click on submit Button 
+Store above details in array of objects . Create Display button to show data on Page in 
+Table format Perform validation on ID,Name,Email,Phone on blur event (Field must not be 
+empty and Name must at least 4 chars and phone must have 10 chars -->
+
+<!DOCTYPE html> <html lang="en"> <head><meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Question-02</title> <script type="text/javascript">
+    var employee=[] 
+    function reset_id_err(){
+    document.getElementById("id_err").innerText = ""
+    }
+    function reset_name_err(){
+    document.getElementById("name_err").innerText = ""
+    }
+    function reset_phone_error(){
+    document.getElementById("phone_error").innerText = ""
+    }
+    function validate_id()
+    {
+    var id = document.getElementById("id").value;
+    if(isNaN(id))
+    {
+    document.getElementById("id_err").innerText= "ID SHOULD CONTAINS  ONLY DIGITS"
+    return false; }
+    return id;
+    }
+    function validate_name(){
+    var name = document.getElementById("name").value;
+    if(name.length < 5){
+    document.getElementById("name_err").innerText = "Name must have more than 5 characters"
+    return false
+    }
+    return name
+    }
+    function validate_phone()
+    {
+    var phone = document.getElementById("phone").value;
+    if(phone.length < 10) {
+    document.getElementById("phone_error").innerText = "phone number  must be 10 digits"
+    return false; }
+    return phone;
+    }
+    function store_data()
+    {
+    var id = validate_id();
+    var name = validate_name();
+    var email = document.getElementById("email").value;
+    var phone = validate_phone();
+    var g=""
+    var gender_arr =document.getElementsByClassName("gender");
+    if(gender_arr[0].checked)
+    {
+    g = gender_arr[0].value;
+    }
+    if(gender_arr[1].checked)
+    {
+    g = gender_arr[1].value;
+    }
+    var city = document.getElementById("city").value;
+    if(id && name && phone && city && g)
+    {
+    employee.push({
+    id : id,
+    name: name,
+    email:email,
+    phone : phone,
+    gender :g,
+    city:city
+    })
+    }
+    return false; }
+    function display_data(){
+    var str = "<table border = 2px  >";
+    str+="<tr><th>ID</th><th>NAME</th><th>EMAIL</th><th>PHONE NO</th><th>GENDER</th><th>CITY</th></tr>";
+    for(var i = 0 ;i < employee.length; i++)
+    {
+    str+="<tr><td>"+employee[i].id+"</td><td>"+employee[i].name+"</td> <td>"+employee[i].email+"</td><td>"+employee[i].phone+"</td><td>"+employee[i].gender+"</td><td>"+employee[i].city+"</td></tr>"
+    }
+    str+="</table>";
+    document.getElementById("display").innerHTML = str;
+    }
+    </script> <style>
+    .error
+    {
+    color: rgb(24, 119, 207); 
+    }
+    </style>
+    </head> 
+    <body>
+        <pre>
+        <form onsubmit="return store_data()">
+          Id     : <input type="text" name="id" id="id" placeholder="Enter ID here" onblur="validate_id()" oninput="reset_id_err()" required>
+         <span class="error" id="id_err"></span>
+          Name   : <input type="text" name="name" id="name" placeholder="Enter your name here" onblur="validate_name()" oninput="reset_name_err()" required> <span class="error" id="name_err"></span>
+          Email  : <input type="text" name="email" id="email"placeholder="Enter your Email here" required><br>
+          Phone  : <input type="tel" name="phone" id="phone"placeholder="Enter your phone number here" onblur="validate_phone()"oninput="reset_phone_error()" required> <span class="error" id="phone_error"></span>
+          Gender : <input type="radio" name="gender" class="gender" value="male"required>Male
+                   <input type="radio" name="gender" class="gender" value="female"required>female
+          City   : <select id="city" required> <option value="Karad">Karad</option> <option value="Pune">Pune</option> <option value="Patna">Patna</option> <option value="Satara">Satara</option> <option value="Kolhapur">Kolhapur</option> <option value="Solapur">Solapur</option> <option value="Jamnager">Jamnager</option> <option value="Maharastra">Maharastra</option> <option value="Bihar">Bihar</option>
+    </select><br>
+          DOB    :<input type="date" name="date" id="dob" required><br>
+     <button>Submit</button> <button onclick="display_data()"> Display data</button>
+    </form>
+    </pre> <div id="display"></div>
+    </body>
+    </html>

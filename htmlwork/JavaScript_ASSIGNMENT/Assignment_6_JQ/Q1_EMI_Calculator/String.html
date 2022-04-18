@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>String</title>
+<script src=" empoScript.html" defer ></script>
+</head>
+<body>
+<form onsubmit="return operation()">
+Enter String: <input type="text" name="txtString" id="txtString" /><br/>
+Enter Sub-String: <input type="text" name="txtSubString" id="txtSubString"/><br/>
+Enter Replace with String: <input type="text" name="txtReplaceString "id="txtReplaceString" /><br/>
+<input type="radio" name="stringOperation" id = "A" class="stringOperation" value=""/>
+<label for="A">Search substring in main string</label><br>
+ 
+<input type="radio" name="stringOperation" id ="B" class="stringOperation" value=""/>
+<label for="B"> To Upper Case</label><br>
+ 
+<input type="radio" name="stringOperation" id="C" class="stringOperation" value=""/>
+<label for="C"> To Lower Case</label><br>
+ 
+<input type="radio" name="stringOperation" id="D" class="stringOperation" value=""/>
+<label for="D"> Trim spaces</label><br>
+ 
+<input type="radio" name="stringOperation" id="E"class="stringOperation" value=""/>
+<label for="E"> Concatenate</label><br>
+ 
+<input type="radio" name="stringOperation" class="stringOperation" value=""/>
+<label for="E"> replace</label><br>
+ 
+<br/>
+<button>Submit Query</button>
+</form>
+<div id="result"></div>
+</body>
+</html>
+ 

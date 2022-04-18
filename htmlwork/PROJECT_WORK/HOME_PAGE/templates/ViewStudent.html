@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student View </title>
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div align ="center">
+	<div>
+    	<h1> Student List</h1>
+    	<a th:href="@{/admin/register_S}">Add New Student</a>
+    	&nbsp;
+    	<a th:href="@{/admin/home}">Home</a>
+    	&nbsp;
+    	<a th:href="@{/admin/viewstudent}">View All</a>
+    	
+    </div>
+    <div>&nbsp;</div>
+    <div>
+    	<form th:action="@{/admin/viewstudent}">
+    		Search By First Name: 
+    		<input type="text" name="name" required/>
+    		&nbsp;
+    		<input type="submit" value="Search"/>
+    	</form>
+    </div>
+    <div>&nbsp;</div>
+    <div>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>F_Name</th>
+                <th>L_Name</th>
+              	<th>Father</th>               
+                <th>Mother</th> 
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>DOA</th>
+                <th>Class</th>
+                <th>Fee Status</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${listStudent}">
+                <td th:text="${student.Id}">Student ID</td>
+                <td th:text="${student.fName}">F_Name</td>
+                <td th:text="${student.lName}">L_Name</td>
+               <td th:text="${student.father}">Father</td>
+                <td th:text="${student.mother}">Mother</td>
+                <td th:text="${student.gender}">Gender</td>
+                <td th:text="${student.DOB}">DOB</td>
+                <td th:text="${student.email}">Email</td>
+               <td th:text="${student.address}">Address</td>
+               <td th:text="${student.date_of_Submission}">date_of_Submission</td>
+               <td th:text="${student.classes}">Class</td>
+                <td th:text="${student.fee_status}">Fee Status</td>
+                
+                <td>
+                   <a th:href="@{'/admin/edit/' + ${student.Id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/admin/delete/' + ${student.Id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>   
+</body>
+</html>

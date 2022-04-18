@@ -1,0 +1,28 @@
+<!-- Q2_4.Write a code to take string input from user and remove duplicate words. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>remove duplicate words</title>
+	 <script>
+
+        function removeDuplicate(string)
+        {
+        return string.split('')
+
+            .filter(function(item, pos, self)
+            {
+            return self.indexOf(item) == pos;
+            })
+
+        .join('');
+        }
+        var str = prompt("Enter a word : ")
+        document.write( " "+removeDuplicate(str));
+        </script>
+</head>
+<body>
+
+</body>
+</html>

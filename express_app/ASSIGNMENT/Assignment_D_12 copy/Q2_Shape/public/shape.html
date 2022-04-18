@@ -1,0 +1,55 @@
+<!-- Q2.Create 3 user defined modules that deal with shapes: circle.js, rectangle.js, triangle.js
+->Circle.js has functions like : calcArea(radius), calcCircumference(radius), calcDiameter(radius)
+->Rectangle.js : calcArea(length, breadth), calcPerimeter(length, breadth)
+->Triangle.js :isEquilateral(side1, side2, side3), calcPerimeter()
+Make use of Math predefined core object. Create HTML page for circle ,traingle and rectangle.Ask server to perform operation -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <label for="">Circle</label>
+    <hr>
+    <form action="/calcCircle" method="post">
+        <input type="text" name="radius" placeholder="Enter radius" required><br><br>
+        
+        <select name="choice" required>
+            <option value="area">Area</option>
+            <option value="circumference">Circumference</option>
+            <option value="diameter">Diameter</option>
+        </select>
+        <button> Calculate</button>
+    </form>
+    <hr>
+    <label>Triangle </label>
+    <hr>
+    <form action="/calcTriangle" method="post">
+        <input type="text" name="side1" placeholder="Enter side 1" required><br><br>
+        <input type="text" name="side2" placeholder="Enter side 2" required><br><br>
+        <input type="text" name="side3" placeholder="Enter side 3" required><br><br>
+        <select name="choice" required>
+            <option value="equilateral">Equilateral</option>
+            <option value="perimeter">Perimeter</option>
+        </select>
+        <button> Calculate</button>
+    </form>
+    <hr>
+    <label >Rectangle </label>
+    <hr>
+    <form action="/calcRectangle" method="post">
+        <input type="text" name="length" placeholder="Enter Length" required><br><br>
+        <input type="text" name="breadth" placeholder="Enter Breadth" required><br><br>
+        <select name="choice" required>
+            <option value="area">Area</option>
+            <option value="perimeter">Perimeter</option>
+        </select>
+        <button> Calculate</button>
+    </form>
+
+</body>
+</html>

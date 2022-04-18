@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Page</title>
+    <script>
+        var listOfFruits =[]
+        function store(){
+            var name = document.getElementById("name").value;
+            if(name){ 
+              listOfFruits.push(name)
+                   
+                }
+            
+            display();      
+            return false // Return false here beacause we dont have server right now to submit data
+        }
+
+        function display(){
+          var str="<ol>";
+          for(var i=0; i<listOfFruits.length; i++){
+              str +="<li>"+listOfFruits[i]+"</li>";
+          }
+          str +="</ol>";
+          document.getElementById("data").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return store()">
+      <input type="name" name="name" id="name" placeholder="Enter name" required><br>
+        <button>Submit </button>
+    </form>
+    <br><br>
+    <div id="data"></div>
+    
+</body>
+</html>
